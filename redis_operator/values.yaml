@@ -1,5 +1,5 @@
 ---
-namespace: THIS WILL BE REPLACED BY THE SCRIPT
+namespace: redis26
 
 operatorgroup:
   metadata:
