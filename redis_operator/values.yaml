@@ -1,5 +1,5 @@
 ---
-namespace: NAMESPACE
+namespace: THIS WILL BE REPLACED BY THE SCRIPT
 
 operatorgroup:
   metadata:
