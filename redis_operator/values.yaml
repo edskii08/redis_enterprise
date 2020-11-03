@@ -1,0 +1,17 @@
+---
+namespace: redis17
+
+operatorgroup:
+  metadata:
+    name: redis-operatorgroup
+
+subscription:
+  metadata:
+    name: redis-enterprise-operator-cert
+  spec:
+    channel: production
+    installPlanApproval: Manual
+    name: redis-enterprise-operator-cert
+    source: certified-operators
+    sourceNamespace: openshift-marketplace
+    startingCSV: redis-enterprise-operator.v6.0.8-1

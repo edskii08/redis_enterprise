@@ -1,0 +1,12 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: Subscription
+metadata:
+  name: {{ .Values.subscription.metadata.name }} 
+  namespace: {{ .Values.namespace }}
+spec:
+  channel: {{ .Values.subscription.spec.channel }}
+  installPlanApproval: {{ .Values.subscription.spec.installPlanApproval }}
+  name: {{ .Values.subscription.spec.name }}
+  source: {{ .Values.subscription.spec.source }}
+  sourceNamespace: {{ .Values.subscription.spec.sourceNamespace }}
+  startingCSV: {{ .Values.subscription.spec.startingCSV }}

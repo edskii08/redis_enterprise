@@ -1,0 +1,5 @@
+apiVersion: v2
+name: redis_deploy
+description: A Helm chart to deploy Redis Enterprose Cluster on Openshift
+version: 0.1.0
+
