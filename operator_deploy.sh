@@ -38,9 +38,11 @@ checkNamespace() {
 
 replaceValues() {
 	
+	GIT_DIR=$(pwd)
+	
 	printInfo "Installer is updating values.yaml file with the proper information"
 	
-	sed -i -e "s/NAMESPACE/${NAMESPACE}/g" /root/operators/helm/redis_operator/values.yaml
+	sed -i -e "s/NAMESPACE/${NAMESPACE}/g" ${GIT_DIR}/redis_operator/values.yaml
 	sleep 2
 }
 
@@ -49,7 +51,7 @@ deployOperatorHelm() {
 	
 	printInfo "The installer will deploy Redis Enterprise Operator resources with the Helm chart"
 	
-	helm upgrade --install redisoperator /root/operators/helm/redis_operator/
+	helm upgrade --install redisoperator ${GIT_DIR}/redis_operator/
 }
 
 approveInstallPlan() { 
