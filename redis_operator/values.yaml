@@ -1,5 +1,5 @@
 ---
-namespace: redis17
+namespace: NAMESPACE
 
 operatorgroup:
   metadata:
