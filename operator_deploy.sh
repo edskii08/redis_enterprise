@@ -42,7 +42,7 @@ replaceValues() {
 	
 	printInfo "Installer is updating values.yaml file with the proper information"
 	
-	sed -i -e "s/NAMESPACE/${NAMESPACE}/g" ${GIT_DIR}/redis_operator/values.yaml
+	sed -i -e "s/\(namespace: \)\(.*\)/\1"${NAMESPACE}"/g" ${GIT_DIR}/redis_operator/values.yaml  # this regex replaces the namespace in values.yaml file, after "namespace: " it inserts actual user entered namespace 
 	sleep 2
 }
 
