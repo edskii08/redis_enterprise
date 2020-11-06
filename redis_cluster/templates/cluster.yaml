@@ -1,0 +1,32 @@
+apiVersion: app.redislabs.com/v1
+kind: RedisEnterpriseCluster
+metadata:
+  name: {{ .Values.name }}
+  namespace: {{ .Values.namespace }}
+spec:
+  extraLabels:
+    enterprise.discover.com/environment: sandbox
+    enterprise.discover.com/pci: no
+    enterprise.discover.com/gdpr: no
+    enterprise.discover.com/data-classification: sensitive
+    enterprise.discover.com/public: no
+    enterprise.discover.com/support-assingment-group: ocpengineering
+    enterprise.discover.com/development-assignment-group: ocpengineering
+    enterprise.discover.com/product: ocpengineering
+  nodes: {{ .Values.spec.nodes }}
+  persistentSpec:
+    enabled: true
+    storageClassName: {{ .Values.spec.persistentSpec.storageClassName }}
+  uiServiceType: ClusterIP
+  username: {{ .Values.spec.username }}
+  redisEnterpriseNodeResources:
+    limits:
+      cpu: {{ .Values.spec.nodeResources.limits.cpu }}
+      memory: {{ .Values.spec.nodeResources.limits.memory }}
+    requests:
+      cpu: {{ .Values.spec.nodeResources.requests.cpu }}
+      memory: {{ .Values.spec.nodeResources.requests.memory }}
+  redisEnterpriseImageSpec:
+    imagePullPolicy: {{ .Values.spec.imageSpec.imagePullPolicy }}
+    repository: {{ .Values.spec.imageSpec.repository }}
+    versionTag: {{ .Values.spec.imageSpec.versionTag }}

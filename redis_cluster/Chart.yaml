@@ -1,0 +1,5 @@
+apiVersion: v2
+name: redis_cluster
+description: A Helm chart to deploy Redis Enterprise Cluster on Openshift
+version: 0.1.1
+

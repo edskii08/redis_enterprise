@@ -1,5 +1,5 @@
 ---
-namespace: redis26
+namespace: redis-test
 
 operatorgroup:
   metadata:
