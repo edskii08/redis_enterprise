@@ -6,7 +6,7 @@ spec:
   nodes: 3
   persistentSpec:
     storageClassName: thin
-  username: ed@discover.com
+  username: ed@test.com
   nodeResources:
     limits:
       cpu: 2000m
