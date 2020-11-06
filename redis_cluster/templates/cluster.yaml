@@ -3,7 +3,7 @@ kind: RedisEnterpriseCluster
 metadata:
   name: {{ .Values.name }}
   namespace: {{ .Values.namespace }}
-  extraLabels:
+  labels:
     enterprise.discover.com/environment: sandbox
     enterprise.discover.com/pci: no
     enterprise.discover.com/gdpr: no
