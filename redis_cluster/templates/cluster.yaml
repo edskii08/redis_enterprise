@@ -4,14 +4,14 @@ metadata:
   name: {{ .Values.name }}
   namespace: {{ .Values.namespace }}
   labels:
-    enterprise.discover.com/environment: "sandbox"
-    enterprise.discover.com/pci: no
-    enterprise.discover.com/gdpr: no
-    enterprise.discover.com/data-classification: "sensitive"
-    enterprise.discover.com/public: no
-    enterprise.discover.com/support-assignment-group: "ocpengineering"
-    enterprise.discover.com/development-assignment-group: "ocpengineering"
-    enterprise.discover.com/product: "redis-enterprise"
+    test.com/environment: "sandbox"
+    test.com/pci: no
+    test.com/gdpr: no
+    test.com/data-classification: "sensitive"
+    test.com/public: no
+    test.com/support-assignment-group: "ocpengineering"
+    test.com/development-assignment-group: "ocpengineering"
+    test.com/product: "redis-enterprise"
 spec:
   nodes: {{ .Values.spec.nodes }}
   persistentSpec:
