@@ -9,7 +9,7 @@ metadata:
     enterprise.discover.com/gdpr: no
     enterprise.discover.com/data-classification: "sensitive"
     enterprise.discover.com/public: no
-    enterprise.discover.com/support-assingment-group: "ocpengineering"
+    enterprise.discover.com/support-assignment-group: "ocpengineering"
     enterprise.discover.com/development-assignment-group: "ocpengineering"
     enterprise.discover.com/product: "redis-enterprise"
 spec:
